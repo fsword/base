@@ -26,4 +26,4 @@ WORKDIR /opt/app
 EXPOSE 9292
 
 ONBUILD COPY . /opt/app
-ONBUILD RUN bundle install -V --deployment
+ONBUILD RUN bundle install
