@@ -1,5 +1,5 @@
-FROM ruby:2.2.2
-MAINTAINER li.jianye@gmail.com 2015.7.28.
+FROM ruby:2.2
+MAINTAINER li.jianye@gmail.com 2015.9.15.
 
 COPY sources.list /etc/apt/sources.list
 
@@ -25,5 +25,7 @@ WORKDIR /opt/app
 
 EXPOSE 9292
 
-ONBUILD COPY . /opt/app
+ONBUILD COPY Gemfile* /opt/app
 ONBUILD RUN bundle install
+ONBUILD COPY . /opt/app
+
