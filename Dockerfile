@@ -7,7 +7,7 @@ RUN ["apt-get", "update"]
 RUN ["apt-get", "install", "nano", "libmysqlclient-dev", "locales", "-y", "-q"]
 
 RUN gem source -r https://rubygems.org/ \
-        && gem source -a http://ruby.taobao.org
+        && gem source -a https://ruby.taobao.org
 
 RUN echo 'zh_CN.UTF-8 UTF-8' >> /etc/locale.gen \
         && echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen \
