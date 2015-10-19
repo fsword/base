@@ -26,6 +26,6 @@ WORKDIR /opt/app
 EXPOSE 9292
 
 ONBUILD COPY Gemfile* /opt/app/
-ONBUILD RUN bundle install
+ONBUILD RUN bundle install --local || bundle install
 ONBUILD COPY . /opt/app/
 
